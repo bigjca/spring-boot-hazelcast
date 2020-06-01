@@ -22,8 +22,4 @@ public class CacheConfig {
         return config;
     }
 
-    @Bean
-    CacheManager cacheManager() {
-        return new HazelcastCacheManager(Hazelcast.newHazelcastInstance(config()));
-    }
 }

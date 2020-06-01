@@ -14,6 +14,7 @@ public class CacheConfig {
     @Bean
     Config config() {
         Config config = new Config();
+        config.getNetworkConfig().getJoin().getTcpIpConfig().setEnabled(false);
         config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
         config.getNetworkConfig().getJoin().getKubernetesConfig().setEnabled(true)
                 .setProperty("namespace", "jsandbox")

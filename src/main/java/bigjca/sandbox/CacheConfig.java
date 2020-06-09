@@ -16,9 +16,7 @@ public class CacheConfig {
         Config config = new Config();
         config.getNetworkConfig().getJoin().getTcpIpConfig().setEnabled(false);
         config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
-        config.getNetworkConfig().getJoin().getKubernetesConfig().setEnabled(true)
-                .setProperty("namespace", "jsandbox")
-                .setProperty("service-name", "spring-boot-hazelcast");
+        config.getNetworkConfig().getJoin().getKubernetesConfig().setEnabled(true);
         return config;
     }
 
